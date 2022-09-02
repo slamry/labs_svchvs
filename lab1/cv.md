@@ -11,7 +11,7 @@
   + _Programming languages_: C#, Java, SQL
   + _Frameworks:_ ASP.NET MVC
 * __Code examples:__
-  ```
+```
   public class Main {
 
     public static void main(String[] args) {
@@ -51,33 +51,33 @@
             sumOfCountOfAssignments = 0;
         }
     }
-}
+  }
 
-public class ArrayValidator {
+  public class ArrayValidator {
 
-    public static void FillArray(int [] array){
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++){
-            //рандомим от 0 до 200
-            array[i] = random.nextInt(200);
-        }
-    }
+      public static void FillArray(int [] array){
+          Random random = new Random();
+          for (int i = 0; i < array.length; i++){
+              //рандомим от 0 до 200
+              array[i] = random.nextInt(200);
+          }
+      }
 
-    public static int FindCountOfAssignments (int[] array){
-        int countOfAssignments = 0;
-        int maxValue = array[0];
-        countOfAssignments++;
+      public static int FindCountOfAssignments (int[] array){
+          int countOfAssignments = 0;
+          int maxValue = array[0];
+          countOfAssignments++;
 
-        for (int i = 1; i < array.length; i++){
-            if (maxValue < array[i]){
-                maxValue = array[i];
-                countOfAssignments++;
-            }
-        }
-        return countOfAssignments;
-    }
-}
-  ```
+          for (int i = 1; i < array.length; i++){
+              if (maxValue < array[i]){
+                  maxValue = array[i];
+                  countOfAssignments++;
+              }
+          }
+          return countOfAssignments;
+      }
+  }
+```
 * __Programming experience:__
 + Link: [Labs_SVChVS](https://github.com/slamry/Labs_SVChVS), language: Markdown
 * __English level:__ B1
