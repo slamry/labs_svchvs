@@ -82,4 +82,4 @@
 + Link: [Labs_SVChVS](https://github.com/slamry/Labs_SVChVS), language: Markdown
 * __English level:__ B1
 * __Photo:__
-  + ![photo](/img/1.jpg)
+  + ![photo](/lab1/img/1.jpg)
