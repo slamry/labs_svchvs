@@ -1,3 +1,9 @@
+---
+layout: pages
+title: "Curriculum Vitae"
+permalink: /Curriculum Vitae/
+---
+# Curriculum Vitae
 ### Hi, that's my CV
 * __Maria Ryabikovskaya__
 * __Contacts:__
