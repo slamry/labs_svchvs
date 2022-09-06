@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Curriculum Vitae</title>
+  </head>
+  <body>
+    <h2>Hi, that's my CV</h2>
+        <ul type="disc">
+            <li><b>Maria Ryabikovskaya</b></li>
+            <li><b>Contacts</b>:
+                <ul type="circle">
+                <li>Phone number: 375293077258</li>
+                <li>E-mail: niceshizachan@gmail.com</li>
+                <li>Instagram: @slamrych</li>
+                </ul>
+            </li>
+            <li><b>A few words about me</b>:
+                <ul type="circle">
+                    <li><i>Firstly</i>, my goal and main priority in life is developing yourself as a specialist in programming, because this field of activity means constant learning and development</li>
+                    <li><i>Secondly</i>, my strengths are perseverance and desire to develop (as I said)</li>
+                </ul>
+            </li>
+            <li><b>Skills:</b>
+                <ul type="circle">
+                    <li><i>Programming languages</i>: C#, Java, SQL</li>
+                    <li><i>Frameworks</i>: ASP.NET MVC</li>
+                </ul>
+            </li>
+            <li><b>Code example:</b>
+                <div id = "code">
+                    <pre>
+                        <code>
+                            public class Main {
+
+                                public static void main(String[] args) {
+                                    int [] array = new int[10];
+                                    int countOfAssignments = 0;
+                            
+                                    System.out.print("Enter count of experiments: ");
+                                    Scanner sc = new Scanner(System.in);
+                                    int experimentalCount = sc.nextInt();
+                                    int sumOfCountOfAssignments = 0;
+                            
+                                    double averageCount;
+                                    double sigma;
+                                    double dispersion;
+                            
+                                    double theoreticalAssignmentsCount = 0.0;
+                                    for (var i = 1; i <= 10; i++){
+                                        theoreticalAssignmentsCount += 1.0 / i;
+                                    };
+                            
+                                    for (int i = 0; i < 10; i++){
+                            
+                                        for(int j = 0; j <= experimentalCount; j++){
+                                            ArrayValidator.FillArray(array);
+                                            countOfAssignments = ArrayValidator.FindCountOfAssignments(array);
+                                            sumOfCountOfAssignments += countOfAssignments;
+                                        }
+                            
+                                        averageCount = sumOfCountOfAssignments / (double) experimentalCount ;
+                                        sigma = Math.abs(averageCount - theoreticalAssignmentsCount);
+                                        dispersion = sigma * sigma;
+                            
+                                        System.out.println(i + ") " + "Среднее количество присваиваний: " + averageCount + " Сигма: " + sigma + " Дисперсия: " + dispersion);
+                                        sumOfCountOfAssignments = 0;
+                                    }
+                                }
+                            }
+                            
+                            public class ArrayValidator {
+                            
+                                public static void FillArray(int [] array){
+                                    Random random = new Random();
+                                    for (int i = 0; i < array.length; i++){
+                                        array[i] = random.nextInt(200);
+                                    }
+                                }
+                            
+                                public static int FindCountOfAssignments (int[] array){
+                                    int countOfAssignments = 0;
+                                    int maxValue = array[0];
+                                    countOfAssignments++;
+                            
+                                    for (int i = 1; i < array.length; i++){
+                                        if (maxValue < array[i]){
+                                            maxValue = array[i];
+                                            countOfAssignments++;
+                                        }
+                                    }
+                                    return countOfAssignments;
+                                }
+                            }
+                        </code>
+                    </pre> 
+                </div>
+            </li>
+            <li><b>Programming experience:</b>
+                <ul type="circle">
+                    <li><a href="https://github.com/slamry/Labs_SVChVS">Project link</a>, language: HTML, CSS</li>
+                </ul>
+            </li>
+            <li><b>English level</b>: B1</li>
+        </ul>
+
+<!--
+* __Photo:__
+
+  + ![photo](/lab1/1.jpg)-->
+  </body>
+</html>
