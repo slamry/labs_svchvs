@@ -89,4 +89,4 @@ permalink: /Curriculum Vitae/
 * __English level:__ B1
 * __Photo:__
 
-  + ![photo](/lab1/img/1.jpg)
+  + ![photo](/lab1/1.jpg)
