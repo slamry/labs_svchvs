@@ -1,3 +1,3 @@
 # labs_svchvs
 
-__оп, проверка__
+https://slamry.github.io/labs_svchvs/Curriculum%20Vitae/
