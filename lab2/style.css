@@ -37,6 +37,9 @@ li{
 .notype{
     list-style-type: none;
 }
+.circle{
+    list-style-type: circle;
+}
 
 /*
 #name{
