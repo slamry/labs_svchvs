@@ -1,3 +1,3 @@
 # labs_svchvs
 
-https://slamry.github.io/labs_svchvs/lab2
+https://slamry.github.io/labs_svchvs
