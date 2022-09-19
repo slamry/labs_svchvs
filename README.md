@@ -1,3 +1,4 @@
-# labs_svchvs
+__Ссылка на Figma-макет:__ https://www.figma.com/file/eomLgD8TossaQGFcPXCGZm/Branding-X?node-id=0%3A1
 
-__оп, проверка__
+
+### Текстовый прототип для лендинга
