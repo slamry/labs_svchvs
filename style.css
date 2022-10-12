@@ -1,0 +1,68 @@
+html, body {font-family: 'Urbanist', sans-serif; }
+header{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 69px;
+    width: 1440px;    
+}
+hr{
+    margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #DAD9D6;
+    width: 1145px;    
+}
+#container_logo{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 5.5%; 
+}
+#header_p_branding{
+    position: relative;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: 1px;
+    padding-top: 10%;
+    padding-left: 3%;
+    white-space: pre;
+
+}
+
+#container_cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 26.7%;
+    padding-top: 0.6%;
+    /*margin-right: auto;*/
+}
+#cart_text{
+    font-size: 13.5px;
+    letter-spacing: 0.5px;
+    white-space: pre;
+    text-transform: uppercase;
+}
+#div_menu{
+    padding-left: 6.3%;
+    padding-top: 2%;
+}
+#menu_img{  
+    position: relative;  
+    width: 103%;
+}
+
+
+#header_img{
+    position: relative;
+    height: 38px;
+    width: 48px;    
+}
+#header_div_img{
+    padding-top: 6.5%;
+    padding-left: 4%;
+}
+
+
