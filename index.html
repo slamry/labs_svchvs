@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Curriculum Vitae</title>
+  </head>
+  <body>
+    <div class = "cv">
+        <div id="kafka_img">
+            <img src="img/1.jpg" alt="кафка гречневая">
+        </div>
+        <div id="name">
+            <header>            
+                <h1>Maria Ryabikovskaya</h1>          
+             </header>
+        </div>        
+        <hr id="hr_head">       
+        
+        <nav>
+            <ul class="notype">
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#shortly_about">A few words</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#programming_exp">Programming experience</a></li>
+                <li><a href="#lang">Languages</a></li>
+                <li><a href="#code">Code</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <ul class="notype">        
+            <li>
+                <a id="contacts"></a>
+                <h2>Contacts:</h2>
+                <hr>
+                <ul class="circle">
+                <li><i>Phone number:</i> 375293077258</li>
+                <li><i>E-mail:</i> niceshizachan@gmail.com</li>
+                <li><i>Instagram:</i> @slamrych</li>
+                </ul>
+            </li>
+            <li>
+                <a id="shortly_about"></a>
+                <h2>A few words about me:</h2>
+                <hr>
+                <ul class="circle">
+                    <li><i>Firstly</i>, my goal and main priority in life is developing yourself as a specialist in programming, because this field of activity means constant learning and development</li>
+                    <li><i>Secondly</i>, my strengths are perseverance and desire to develop (as I said)</li>
+                </ul>
+            </li>
+            <li>
+                <a id="skills"></a>
+                <h2>Skills:</h2>
+                <hr>
+                <ul class="circle">
+                    <li><i>Programming languages</i>: C#, Java, SQL</li>
+                    <li><i>Frameworks</i>: ASP.NET MVC</li>
+                </ul>
+            </li>
+            <li>
+                <a id="programming_exp"></a>
+                <h2>Programming experience:</h2>
+                <hr>
+                <ul class="circle">
+                    <li><a href="https://github.com/slamry/Labs_SVChVS">Project link</a>, language: HTML, CSS</li>
+                </ul>
+            </li>
+            <li>
+                <a id="lang"></a>
+                <h2>Languages:</h2>                
+                <hr>
+                <ul class="circle">
+                    <li><i>English</i>: B1</li>
+                    <li><i>Russian</i>: C2</li>
+                </ul>
+            </li>
+            <li>
+                <a id="code"></a>
+                <h2>Code example:</h2>
+                <input type="checkbox" class="read-more-checker" id="read-more-checker" />
+                <div class="limiter">                
+                <div class = "code">
+                <pre>
+                <code>
+                public class Main {
+
+                    public static void main(String[] args) {
+                        int [] array = new int[10];
+                        int countOfAssignments = 0;
+                
+                        System.out.print("Enter count of experiments: ");
+                        Scanner sc = new Scanner(System.in);
+                        int experimentalCount = sc.nextInt();
+                        int sumOfCountOfAssignments = 0;
+                
+                        double averageCount;
+                        double sigma;
+                        double dispersion;
+                
+                        double theoreticalAssignmentsCount = 0.0;
+                        for (var i = 1; i &lt;= 10; i++){
+                            theoreticalAssignmentsCount += 1.0 / i;
+                        };
+                
+                        for (int i = 0; i &lt; 10; i++){
+                
+                            for(int j = 0; j &lt;= experimentalCount; j++){
+                                ArrayValidator.FillArray(array);
+                                countOfAssignments = ArrayValidator.FindCountOfAssignments(array);
+                                sumOfCountOfAssignments += countOfAssignments;
+                            }
+                
+                            averageCount = sumOfCountOfAssignments / (double) experimentalCount ;
+                            sigma = Math.abs(averageCount - theoreticalAssignmentsCount);
+                            dispersion = sigma * sigma;
+                
+                            System.out.println(i + ") " + "Среднее количество присваиваний: "
+                            + averageCount + " Сигма: " + sigma + " Дисперсия: " + dispersion);
+                            sumOfCountOfAssignments = 0;
+                        }
+                    }
+                }
+                
+                public class ArrayValidator {
+                
+                    public static void FillArray(int [] array){
+                        Random random = new Random();
+                        for (int i = 0; i &lt; array.length; i++){
+                            array[i] = random.nextInt(200);
+                        }
+                    }
+                
+                    public static int FindCountOfAssignments (int[] array){
+                        int countOfAssignments = 0;
+                        int maxValue = array[0];
+                        countOfAssignments++;
+                
+                        for (int i = 1; i &lt; array.length; i++){
+                            if (maxValue &lt; array[i]){
+                                maxValue = array[i];
+                                countOfAssignments++;
+                            }
+                        }
+                        return countOfAssignments;
+                    }
+                }
+                </code>
+                </pre> 
+                </div>            
+                <div class="bottom"></div>
+                </div>
+                <label for="read-more-checker" class="read-more-button"></label>
+            </li>        
+        </ul>
+        </main>
+        
+        <footer>
+            <div id="foot">
+                <p>
+                    <a href="https://github.com/slamry/Labs_SVChVS">Project on GitHub</a> 2022
+                </p>
+            </div>            
+        </footer>        
+    </div>
+  </body>
+</html>
