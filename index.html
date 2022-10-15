@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Branding X</title>
   </head>
   <body>
@@ -32,13 +32,13 @@
                         </div>
                         <div class="menu__body">
                             <ul class="menu__list" id="menu">
-                                <li><a href="" class="menu__link">Category1</a></li>
-                                <li><a href="" class="menu__link">Category2</a></li>
-                                <li><a href="" class="menu__link">Category3</a></li>
-                                <li><a href="" class="menu__link">Category4</a></li>
-                                <li><a href="" class="menu__link">Category5</a></li>
-                                <li><a href="" class="menu__link">Category6</a></li>
-                                <li><a href="" class="menu__link">Category7</a></li>
+                                <li><a href="#main" class="menu__link">Main</a></li>
+                                <li><a href="#services" class="menu__link">Services</a></li>
+                                <li><a href="#" class="menu__link">About us</a></li>
+                                <li><a href="#" class="menu__link">Projects</a></li>
+                                <li><a href="#" class="menu__link">Contact us</a></li>
+                                <li><a href="#" class="menu__link">Articles</a></li>
+                                <li><a href="#" class="menu__link">Navigation</a></li>
                             </ul>
                         </div>
                     </div>      
@@ -51,78 +51,90 @@
     <main>
         <div class="container">
             <div class="main-page__body">
-                <div class="main-page__content">
-                    <div class="main-page__title">
-                        We're a creative<br>design agency from<br>Los Angeles, CA
+                <div class="main-page__body__grid">
+                    <div class="main__grid__item main-page__content">
+                        <div class="main-page__title">
+                            <a name="main"></a>
+                            We're a creative design agency from Los Angeles, CA
+                        </div>
+                        <div class="main-page__description">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
+                        </div>
+                        <div class="main-page__buttons">
+                            <button id="main-page_button1">CONTACT US</button>
+                            <button id="main-page_button2">OUR PROJECTS</button>
+                        </div>
                     </div>
-                    <div class="main-page__description">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed<br>do eiusmod tempor incididunt ut labore.
+                    <div class="main__grid__item main-page__body__img">
+                        <div id="main-img-desktop">
+                            <img src="images/desktop/main-page/img.png" height="895px">
+                        </div>
+                        <div id="main-img-tablet">
+                            <img src="images/tablet/main-page/img.png" height="749px" width="247px">
+                        </div>
                     </div>
-                    <div class="main-page__buttons">
-                        <button id="main-page_button1">CONTACT US</button>
-                        <button id="main-page_button2">OUR PROJECTS</button>
-                    </div>                
-                </div>
-                <div class="main-page__body__img">
-                    <img height="895px" src="images/main.png">
-                </div>
+                </div>              
             </div>
             <div class="services-page">
                 <div class="services-page__body">
                     <div class="services__item__head">
                         <div class="services-page__title">
+                            <a name="services"></a>
                             <p id="services__title-text">
-                                We're more than just a<br>branding agency.
+                                We're more than just a branding agency.
                             </p>
                         </div>
                         <div class="services-page__button">
-                            <button id="services__button1">Browse all services</button>
+                            <button id="services__button__desktop">Browse all services</button>
                         </div>
                     </div> 
                     <div class="services-page__body__grid">
                         <div class="services__grid__item" id="services__grid__item-1">
                             <div class="services-page__img">
-                                <img src="images/services-page/1.png">
+                                <img src="images/desktop/services-page/1.png">
                             </div>                             
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Branding</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         <div class="services__grid__item" id="services__grid__item-2">
                             <div class="services-page__img">
-                                <img src="images/services-page/2.png">
+                                <img src="images/desktop/services-page/2.png">
                             </div>                             
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Web Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
-                        <div class="services__grid__item">
+                        <div class="services__grid__item" id="services__grid__item-3">
                             <div class="services-page__img">
-                                <img src="images/services-page/3.png">
+                                <img src="images/desktop/services-page/3.png">
                             </div>                             
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>UX/UI Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         
-                        <div class="services__grid__item">
+                        <div class="services__grid__item"  id="services__grid__item-4">
                             <div class="services-page__img">
-                                <img src="images/services-page/4.png">
+                                <img src="images/desktop/services-page/4.png">
                             </div>                            
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Graphic Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
-                        <div class="services__grid__item">
+                        <div class="services__grid__item"  id="services__grid__item-5">
                             <div class="services-page__img" id="services__grid__item-5">
-                                <img src="images/services-page/5.png">
+                                <img src="images/desktop/services-page/5.png">
                             </div> 
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Motion Graphics</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
-                        <div class="services__grid__item">
+                        <div class="services__grid__item"  id="services__grid__item-6">
                             <div class="services-page__img" id="services__grid__item-6">
-                                <img src="images/services-page/6.png">
+                                <img src="images/desktop/services-page/6.png">
                             </div>
                             <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Marketing</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
+                    </div>
+                    <div class="services-page__button">
+                        <button id="services__button__tablet">Browse all services</button>
                     </div>
                 </div>
             </div>
