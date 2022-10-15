@@ -20,12 +20,29 @@
                     </div>
                 </div>            
                 <div class="header__cart">
-                    <p class="header__cart p">
-                        CART ( O )
-                    </p>    
-                    <div class="header__cart menu">
-                        <img src="images/menu.png">
-                    </div>        
+                    <div class="header__cart-text">
+                        CART ( 0 )
+                    </div>
+                    <div class="header__menu">
+                        <div class="menu__hamb">
+                            <div class="hamb__field" id="hamb">
+                                <span class="bar" id="bar1"></span>
+                                <span class="bar" id="bar2"></span>
+                            </div>                            
+                        </div>
+                        <div class="menu__body">
+                            <ul class="menu__list" id="menu">
+                                <li><a href="" class="menu__link">Category1</a></li>
+                                <li><a href="" class="menu__link">Category2</a></li>
+                                <li><a href="" class="menu__link">Category3</a></li>
+                                <li><a href="" class="menu__link">Category4</a></li>
+                                <li><a href="" class="menu__link">Category5</a></li>
+                                <li><a href="" class="menu__link">Category6</a></li>
+                                <li><a href="" class="menu__link">Category7</a></li>
+                            </ul>
+                        </div>
+                    </div>      
+                    <div class="popup" id="popup"></div>                 
                 </div>     
             </div>  
         </div>                
@@ -64,34 +81,46 @@
                     </div> 
                     <div class="services-page__body__grid">
                         <div class="services__grid__item" id="services__grid__item-1">
-                            <img class="services-page__img" src="images/services-page/1.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>Branding</p>
+                            <div class="services-page__img">
+                                <img src="images/services-page/1.png">
+                            </div>                             
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Branding</p>
+                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                        </div>
+                        <div class="services__grid__item" id="services__grid__item-2">
+                            <div class="services-page__img">
+                                <img src="images/services-page/2.png">
+                            </div>                             
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Web Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         <div class="services__grid__item">
-                            <img class="services-page__img" src="images/services-page/2.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>Web Design</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
-                        </div>
-                        <div class="services__grid__item">
-                            <img class="services-page__img" src="images/services-page/3.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>UX/UI Design</p>
+                            <div class="services-page__img">
+                                <img src="images/services-page/3.png">
+                            </div>                             
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>UX/UI Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         
                         <div class="services__grid__item">
-                            <img class="services-page__img" src="images/services-page/4.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>Graphic Design</p>
+                            <div class="services-page__img">
+                                <img src="images/services-page/4.png">
+                            </div>                            
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Graphic Design</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         <div class="services__grid__item">
-                            <img class="services-page__img" src="images/services-page/5.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>Motion Graphics</p>
+                            <div class="services-page__img" id="services__grid__item-5">
+                                <img src="images/services-page/5.png">
+                            </div> 
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Motion Graphics</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         <div class="services__grid__item">
-                            <img class="services-page__img" src="images/services-page/6.png">
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/ </span>Marketing</p>
+                            <div class="services-page__img" id="services__grid__item-6">
+                                <img src="images/services-page/6.png">
+                            </div>
+                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Marketing</p>
                             <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                     </div>
@@ -102,6 +131,6 @@
     </main>
 
     <footer></footer>
-    <script>js/script.js</script>
+    <script src="js/script.js"></script>
   </body>
 </html>
