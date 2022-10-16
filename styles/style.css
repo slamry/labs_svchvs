@@ -973,3 +973,34 @@ body.noscroll {
     display: flex;
     flex-direction: column;
 }
+
+
+.contact-us__body{
+    padding-left: 5%;
+}
+.contact-us__wrap{
+    background-color: #F0EFEC;
+}
+.contact-us__banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;   
+    grid-row-gap: 0%;
+}
+.contact-us__banner__text{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.contact-us__content{
+    padding-right: 0%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);   
+    grid-row-gap: 0%;
+}
+.contact-us__buttons{
+    display: flex;
+    justify-content: center;
+}
