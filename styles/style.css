@@ -1129,7 +1129,7 @@ body.noscroll {
 
 
 .articles__body{
-    padding: 15.25% 7.15%;
+    padding: 15.25% 7.15% 0%;
     display: grid;
     grid-template-rows: 170px 648px;
 }
@@ -1225,4 +1225,111 @@ body.noscroll {
     font-size: 17px;
     line-height: 177%;
     color: #555671;
+}
+
+
+.nav__title-part{
+    background-color:#F0EFEC;
+}
+.nav__wrapper{
+    padding: 12.6% 7.2%;
+}
+.nav__main-part > div{
+    padding-right: 0%;
+}
+.nav__title-part__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 34%;
+}
+.nav__item__title{
+    padding-top: 0.45%;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 123%;
+    letter-spacing: 3.3px;
+    text-transform: uppercase;
+    color: #181A3F;
+}
+.nav__item__contacts{
+    padding-right: 6%;
+    padding-top: 1%;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 228%;
+    color: #181A3F;
+}
+
+.nav__main-part__grid{
+    display: grid;
+    grid-template-columns: 1.3fr 0.55fr 0.7fr 1fr;
+    justify-items: flex-start;
+    /*grid-column-gap: 0%;*/
+}
+.nav__main-part__company{
+    display: flex;
+    justify-content: flex-start;
+}
+.nav__main-part__company > img{
+    width: 56.61px;
+    height: 45.99px;
+}
+.nav__main-part__company > p{
+    margin-top: 0%;
+    padding-left: 2%;
+    padding-top: 1.5%;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.nav__main-part__item{
+    text-transform: uppercase;
+    padding-left: 0%;
+}
+.nav__list{
+    padding-left: 0%;
+}
+#nav__list1{
+    padding-left: 7.5%;
+}
+#nav__list1 > .nav__main-part__list-content > ul > li{
+    padding-bottom: 3.8%;
+    padding-top: 14%;
+}
+#nav__list2{
+    padding-left: 8.5%;
+    padding-top: 10%;
+}
+#nav__list2 > .nav__main-part__list-content > ul > li{
+    padding-bottom: 4.6%;
+    padding-top: 14%;
+}
+#nav__list3{
+    padding-left: 15%;
+}
+#nav__list3 > .nav__main-part__list-content > ul > li{
+    padding-bottom: 0;
+    padding-top: 14%;
+}
+
+.nav__main-part__list-title{
+    padding-bottom: 0%;
+    font-size: 21px;
+    font-weight: bolder;
+}
+.nav__main-part__list-content > ul{
+    list-style-type: none;
+    padding-inline-start: 0%;
+}
+.nav__main-part__list-content > ul > li{
+    letter-spacing: 1px;
+}
+.nav__main-part__contacts{
+    padding-right: 40%;
+    padding-top: 6%;
+    text-transform: lowercase;
+    font-size: 22px;
+    line-height: 249%;
+    letter-spacing: 0.15px;
+    color: #181A3F;
 }
