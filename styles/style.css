@@ -109,7 +109,7 @@ header::after{
 }
 .popup {
     position: fixed;
-    top: 120px;
+    top: 115px;
     right: -100%;
     width: 100%;
     height: 100%;
@@ -1125,4 +1125,104 @@ body.noscroll {
     border-color: #000;
     text-decoration: none;
     display: inline-block;
+}
+
+
+.articles__body{
+    padding: 15.25% 7.15%;
+    display: grid;
+    grid-template-rows: 170px 648px;
+}
+.articles__body::after{
+    margin-top: 21.6%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #DAD9D6;
+}
+.articles__head{
+    display:flex;
+    justify-content: space-between;
+}
+.articles__head > p{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 145%;
+    letter-spacing: 2.15px;
+    text-transform: uppercase;
+    color: #181A3F;
+}
+.articles__head > button{
+    margin-top: 4%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;    
+    text-align: center;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;    
+    color: #181A3F;
+
+    height: 40px;
+    width: 352px;
+    background-color: #fff;
+    border-width: 2px;
+    border-color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+.articles__content{
+    padding-top: 1.9%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2.1%;
+}
+.articles__content__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.articles__content__item > img{
+    height: 388px;
+    width: 388px;
+}
+.articles__category-date{
+    padding-top: 0%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;    
+    color: #555671;    
+}
+#item1 > p{
+    padding-top: 3%;
+}
+#item2 > p{
+    margin-top: 0%;
+    margin-bottom: -3%;
+    padding-top: 8%;
+}
+#item3 > p{
+    margin-top: 8%;
+}
+.articles__subtitle{
+    margin-top: -7%;
+    margin-bottom: 0%;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 0.2px;
+    line-height: 139%;
+    color: #181A3F;
+}
+#item2__subtitle{
+    margin-top: 0%;
+}
+.articles__description{
+    margin-top: -7%;
+    padding-right: 17%;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 177%;
+    color: #555671;
 }
