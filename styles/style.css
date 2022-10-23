@@ -2364,19 +2364,21 @@ body.noscroll {
 }
 
 #nav__list1 > .nav__main-part__list-content > ul > li{
-    padding-bottom: 6.8%;
-    padding-top: 10%;
-    letter-spacing: -0.2px;
+    padding-bottom: 7.8%;
+    padding-top: 11%;
+    letter-spacing: 1.8px;
 }
 @media (max-width: 768px){
     #nav__list1 > .nav__main-part__list-content > ul > li{
         margin: -3% 0%;
         padding-top: 6%;
         padding-bottom: 13.7%;
+        letter-spacing: -0.2px;
     }
 }
 @media (max-width: 320px){
     #nav__list1 > .nav__main-part__list-content > ul > li{
+        margin: -3% 0%;
         letter-spacing: 0.72px;
         font-size: 13px;
         padding-top: 6%;
@@ -2390,8 +2392,8 @@ body.noscroll {
 }
 #nav__list2 > .nav__main-part__list-content > ul > li{
     padding-bottom: 3.6%;
-    padding-top: 14%;
-    letter-spacing: 0px;
+    padding-top: 16%;
+    letter-spacing: 2px;
 }
 @media (max-width: 768px){
     #nav__list2{
@@ -2421,13 +2423,17 @@ body.noscroll {
 }
 
 #nav__list3 > .nav__main-part__list-content > ul > li{
-    padding-bottom: 1%;
-    padding-top: 12%;
-    letter-spacing: 0px;
+    padding-bottom: 2%;
+    padding-top: 13%;
+    letter-spacing: 2px;    
 }
 @media (max-width: 768px){
     #nav__list3 > .nav__main-part__list-content > ul{
         margin-top:11%;
+
+        padding-bottom: 1%;
+        padding-top: 12%;
+        letter-spacing: 0px;
     }
     #nav__list3 > .nav__main-part__list-content > ul > li{
         margin: 0% 0%;
