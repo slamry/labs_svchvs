@@ -8,6 +8,30 @@
     <title>Branding X</title>
   </head>
   <body>
+
+    <div class="panel-sector">
+        <div class="container">
+            <div class="panel__body">
+                <button class="panel__button textcolor" id="en">
+                    <p>
+                        English
+                    </p>                      
+                </button>
+                <button class="panel__button textcolor" id="ru">
+                    <p>
+                        Русский
+                    </p>                    
+                </button>
+                <button class="panel__button theme" id="light" onclick="setDarkChangeButton()">
+                    <img src="images/icons/dark-mode.png" alt="">
+                </button>
+                <button class="panel__button theme" id="dark" onclick="setLightChangeButton()">
+                    <img src="images/icons/light-mode.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>    
+
     <header>
         <div class="container">
             <div class="header__body">
@@ -15,12 +39,12 @@
                     <div class="header__logo img">
                         <img id="header_img" src="images/header_logo.png">
                     </div>
-                    <div class="header__logo__branding">
+                    <div class="header__logo__branding textcolor">
                         BRANDING X
                     </div>
                 </div>            
                 <div class="header__cart">
-                    <div class="header__cart-text">
+                    <div class="header__cart-text  textcolor" id="cart-text">
                         CART ( 0 )
                     </div>
                     <div class="header__menu">
@@ -53,11 +77,11 @@
             <div class="main-page__body">
                 <div class="main-page__body__grid">
                     <div class="main__grid__item main-page__content">
-                        <div class="main-page__title">
+                        <div class="main-page__title textcolor" id="main-title-text">
                             <a name="main"></a>
                             We're a creative design agency from Los Angeles, CA
                         </div>
-                        <div class="main-page__description">
+                        <div class="main-page__description textcolor" id="main-desc-text">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
                         </div>
                         <div class="main-page__buttons">
@@ -79,7 +103,7 @@
             <div class="services-page">
                 <div class="services-page__body">
                     <div class="services__item__head">
-                        <div class="services-page__title">
+                        <div class="services-page__title textcolor">
                             <a name="services"></a>
                             <p id="services__title-text">
                                 We're more than just a branding agency.
@@ -94,44 +118,60 @@
                             <div class="services-page__img">
                                 <img src="images/desktop/services-page/1.png">
                             </div>                             
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Branding</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle1">
+                                <span style="color: #FF7549">/</span>Branding
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
+
                         <div class="services__grid__item" id="services__grid__item-2">
                             <div class="services-page__img">
                                 <img src="images/desktop/services-page/2.png">
                             </div>                             
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Web Design</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle2">
+                                <span style="color: #FF7549">/</span>Web Design
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
+
                         <div class="services__grid__item" id="services__grid__item-3">
                             <div class="services-page__img">
                                 <img src="images/desktop/services-page/3.png">
                             </div>                             
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>UX/UI Design</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle3">
+                                <span style="color: #FF7549">/</span>UX/UI Design
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                         
                         <div class="services__grid__item"  id="services__grid__item-4">
                             <div class="services-page__img">
                                 <img src="images/desktop/services-page/4.png">
                             </div>                            
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Graphic Design</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle4">
+                                <span style="color: #FF7549">/</span>Graphic Design
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
+
                         <div class="services__grid__item"  id="services__grid__item-5">
                             <div class="services-page__img" id="services__grid__item-5">
                                 <img src="images/desktop/services-page/5.png">
                             </div> 
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Motion Graphics</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle5">
+                                <span style="color: #FF7549">/</span>Motion Graphics
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
+
                         <div class="services__grid__item"  id="services__grid__item-6">
                             <div class="services-page__img" id="services__grid__item-6">
                                 <img src="images/desktop/services-page/6.png">
                             </div>
-                            <p class="services-page__subtitles"><span style="color: #FF7549">/</span>Marketing</p>
-                            <p class="services-page__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
+                            <p class="services-page__subtitles textcolor" id="serv-page-subtitle6">
+                                <span style="color: #FF7549">/</span>Marketing
+                            </p>
+                            <p class="services-page__desc textcolor">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore. Exepteur sintolmelt occaecat cupidatat non proid.</p>
                         </div>
                     </div>
                     <div class="services-page__button">
@@ -143,7 +183,7 @@
             <div class="about-us-page">
                 <div class="about-us__body">
                     <div class="about-us__head">
-                        <div class="about-us__head__title">
+                        <div class="about-us__head__title textcolor">
                             <a name="about-us"></a>
                             Our agency started back in 2002
                         </div>
@@ -153,7 +193,7 @@
                     </div>
                     <div class="about-us__content__grid">
                         <div class="about-us__grid__item" id="about-us__grid__item1">
-                            <p class="about-us__grid__item__text">
+                            <p class="about-us__grid__item__text textcolor">
                                 Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis egestas sed tempus urna sit amet facilisis magna etiam tempor orci non tellus orci ac auctor augue.
                             </p>
                             <img src="images/desktop/about-us-page/1.png">
@@ -166,7 +206,7 @@
                         <div class="about-us__grid__item" id="about-us__grid__item3">
                             <img src="images/desktop/about-us-page/3.png">
                             <img src="images/desktop/about-us-page/4.png" id="about-us__img4">
-                            <p class="about-us__grid__item__text">
+                            <p class="about-us__grid__item__text textcolor">
                                 Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis egestas sed tempus urna sit amet facilisis magna etiam tempor orci non tellus orci ac auctor augue.
                             </p>
                         </div>
@@ -180,7 +220,7 @@
             <div class="projects-page">
                 <div class="projects__body">
                     <div class="projects__head">
-                        <div class="projects__head__title">
+                        <div class="projects__head__title textcolor">
                             <a name="projects"></a>
                             <p>
                                 See our latest portfolio projects
@@ -194,18 +234,18 @@
                     <div class="projects__content__grid">
                         <div class="projects__item__wrap" id="proj__item__wrap1">
                             <div class="projects__grid__item" id="proj__grid__item1">                            
-                                <div class="projects__item__category">
+                                <div class="projects__item__category textcolor">
                                     <p>
                                         Branding <span style="color:#D9D8D5">/</span> 2021
                                     </p>
                                 </div>
                                 <div class="projects__item__portfolio-part">
-                                    <div class="projects__item__subtitle">
+                                    <div class="projects__item__subtitle textcolor">
                                         <p>
                                             Brand Identity for Haus
                                         </p>
                                     </div>
-                                    <div class="projects__item__description">
+                                    <div class="projects__item__description textcolor">
                                         <p>
                                             Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis.
                                         </p>
@@ -216,18 +256,18 @@
 
                         <div class="projects__item__wrap" id="proj__item__wrap2">
                             <div class="projects__grid__item" id="proj__grid__item2">
-                                <div class="projects__item__category">
+                                <div class="projects__item__category textcolor">
                                     <p>
                                         Graphic design <span style="color:#D9D8D5">/</span> 2021
                                     </p>
                                 </div>
                                 <div class="projects__item__portfolio-part">
-                                    <div class="projects__item__subtitle">
+                                    <div class="projects__item__subtitle textcolor">
                                         <p>
                                             Packaging Design for Sezane
                                         </p>
                                     </div>
-                                    <div class="projects__item__description">
+                                    <div class="projects__item__description textcolor">
                                         <p>
                                             Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis.
                                         </p>
@@ -238,18 +278,18 @@
 
                         <div class="projects__item__wrap" id="proj__item__wrap3">
                             <div class="projects__grid__item" id="proj__grid__item3">
-                                <div class="projects__item__category">
+                                <div class="projects__item__category textcolor">
                                     <p>
                                         web design <span style="color:#D9D8D5">/</span> 2021
                                     </p>
                                 </div>
                                 <div class="projects__item__portfolio-part">
-                                    <div class="projects__item__subtitle">
+                                    <div class="projects__item__subtitle textcolor">
                                         <p>
                                             Website Design for Doean
                                         </p>
                                     </div>
-                                    <div class="projects__item__description">
+                                    <div class="projects__item__description textcolor">
                                         <p>
                                             Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis.
                                         </p>
@@ -260,16 +300,16 @@
 
                         <div class="projects__item__wrap" id="proj__item__wrap4">
                             <div class="projects__grid__item" id="proj__grid__item4">
-                                <div class="projects__item__category">
+                                <div class="projects__item__category textcolor">
                                     Graphic design <span style="color:#D9D8D5">/</span> 2021
                                 </div>
                                 <div class="projects__item__portfolio-part">
-                                    <div class="projects__item__subtitle">
+                                    <div class="projects__item__subtitle textcolor">
                                         <p>
                                             Collateral Design for Globex
                                         </p>
                                     </div>
-                                    <div class="projects__item__description">
+                                    <div class="projects__item__description textcolor">
                                         <p>
                                             Pellentesque sit amet porttitor eget dolor morbi non turpis egestas maecenas pharetra convallis posuere netus et malesuada fames ac fames ac turpis.
                                         </p>
@@ -290,7 +330,7 @@
                     <div class="contact-us__wrap">
                         <div class="contact-us__banner">
                             <div class="contact-us__banner__text">
-                                <p>
+                                <p class="textcolor">
                                     Have a project? Get in touch today
                                 </p>
                                 <button id="contact-us__banner__button">contact us</button>
@@ -302,10 +342,10 @@
                     </div>                    
                     <div class="contact-us__content">
                         <div class="contact-us__head">
-                            <div class="contacs-us__head__title">
+                            <div class="contacs-us__head__title textcolor">
                                 A simple, yet effective three step process.
                             </div>
-                            <div class="contacs-us__head__description">
+                            <div class="contacs-us__head__description textcolor">
                                 A scelerisque purus semper eget duis at tellus integer malesuada nunc vel risus commodo viverra maecenas doloro accumsan pharetra massa massa ultricie.
                             </div>
                         </div>
@@ -314,10 +354,10 @@
                                 <div class="step__img">
                                     <img src="images/desktop/contact-us-page/1.png">
                                 </div>
-                                <div class="step__subtitle">
+                                <div class="step__subtitle textcolor">
                                     <span style="color:#FF7549">/</span>Project Idea
                                 </div>
-                                <div class="step__description">
+                                <div class="step__description textcolor">
                                     A scelerisque purus semper eget duis at tellus integer malesuada nunc vel risus commodo viverra maecenas doloro accumsan pharetra massa massa ultricie.
                                 </div>
                             </div>
@@ -325,10 +365,10 @@
                                 <div class="step__img">
                                     <img src="images/desktop/contact-us-page/2.png">
                                 </div>
-                                <div class="step__subtitle">
+                                <div class="step__subtitle textcolor">
                                     <span style="color:#FF7549">/</span>Execution
                                 </div>
-                                <div class="step__description">
+                                <div class="step__description textcolor">
                                     A scelerisque purus semper eget duis at tellus integer malesuada nunc vel risus commodo viverra maecenas doloro accumsan pharetra massa massa ultricie.
                                 </div>
                             </div>
@@ -336,10 +376,10 @@
                                 <div class="step__img">
                                     <img src="images/desktop/contact-us-page/3.png">
                                 </div>
-                                <div class="step__subtitle">
+                                <div class="step__subtitle textcolor">
                                     <span style="color:#FF7549">/</span>Launch
                                 </div>
-                                <div class="step__description">
+                                <div class="step__description textcolor">
                                     A scelerisque purus semper eget duis at tellus integer malesuada nunc vel risus commodo viverra maecenas doloro accumsan pharetra massa massa ultricie.
                                 </div>
                             </div>
@@ -356,7 +396,7 @@
                 <a name="articles"></a>
                 <div class="articles__body">
                     <div class="articles__head">
-                        <p>
+                        <p class="textcolor">
                            Articles & Resources 
                         </p>
                         <button>browse more posts</button>
@@ -364,15 +404,15 @@
                     <div class="articles__content">
                         <div class="articles__content__item" id="item1">
                             <img src="images/desktop/articles-page/1.png">
-                            <p class="articles__category-date">
+                            <p class="articles__category-date textcolor">
                                 Marketing/ nov 22, 2021
                             </p>
-                            <div class="articles__subtitle" id="item1__subtitle">
+                            <div class="articles__subtitle textcolor" id="item1__subtitle">
                                 <p>
                                     The difference between UX & UI Design: A simple guide for beginner's
                                 </p>
                             </div>
-                            <div class="articles__description" id="item1__description">
+                            <div class="articles__description textcolor" id="item1__description">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna
                                 </p>
@@ -380,15 +420,15 @@
                         </div>
                         <div class="articles__content__item" id="item2">
                             <img src="images/desktop/articles-page/2.png">
-                            <p class="articles__category-date">
+                            <p class="articles__category-date textcolor">
                                 development/ nov 22, 2021
                             </p>
-                            <div class="articles__subtitle" id="item2__subtitle">
+                            <div class="articles__subtitle textcolor" id="item2__subtitle">
                                 <p>
                                     Font sizes in graphic design: The complete guide to follow
                                 </p>
                             </div>
-                            <div class="articles__description" id="item2__description">
+                            <div class="articles__description textcolor" id="item2__description">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna
                                 </p>
@@ -396,15 +436,15 @@
                         </div>                        
                         <div class="articles__content__item" id="item3">
                             <img src="images/desktop/articles-page/3.png">
-                            <p class="articles__category-date">
+                            <p class="articles__category-date textcolor">
                                 development/ nov 22, 2021
                             </p>
-                            <div class="articles__subtitle" id="item3__subtitle">
+                            <div class="articles__subtitle textcolor" id="item3__subtitle">
                                 <p>
                                     8 design systems you can check out and download for free
                                 </p>
                             </div>
-                            <div class="articles__description" id="item3__description">
+                            <div class="articles__description textcolor" id="item3__description">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna
                                 </p>
@@ -422,10 +462,10 @@
                 <div class="nav__title-part">
                     <div class="nav__wrapper">
                         <div class="nav__title-part__grid">
-                            <div class="nav__item__title">
+                            <div class="nav__item__title textcolor">
                                 Let's work together
                             </div>
-                            <div class="nav__item__contacts">
+                            <div class="nav__item__contacts textcolor">
                                 <span style="color:#FF7549">/</span>contact@branding.com
                                 <span style="color:#FF7549">/</span>+1 (414) 840 - 3207
                             </div>
@@ -438,21 +478,21 @@
                             <div class="nav__main-part__item">
                                 <div class="nav__main-part__company">
                                     <img src="images/header_logo.png">
-                                    <p>
+                                    <p class="textcolor">
                                         Branding X
                                     </p>
                                 </div>
-                                <div class="nav__main-part__contacts">
+                                <div class="nav__main-part__contacts textcolor">
                                     <span style="color:#FF7549">/</span>contact@branding.com
                                     <span style="color:#FF7549">/</span>+1 (414) 840 - 3207
                                 </div>
                             </div>
 
                             <div class="nav__main-part__item nav__list" id="nav__list1">
-                                <div class="nav__main-part__list-title">
+                                <div class="nav__main-part__list-title textcolor">
                                     Pages
                                 </div>
-                                <div class="nav__main-part__list-content">
+                                <div class="nav__main-part__list-content textcolor">
                                     <ul>
                                         <li>home</li>
                                         <li>about</li>
@@ -465,7 +505,7 @@
                             </div>
 
                             <div class="nav__main-part__item nav__list" id="nav__list2">                            
-                                <div class="nav__main-part__list-content">
+                                <div class="nav__main-part__list-content textcolor">
                                     <ul>
                                         <li>packages</li>
                                         <li>packages single</li>
@@ -476,10 +516,10 @@
                             </div>
 
                             <div class="nav__main-part__item nav__list" id="nav__list3">
-                                <div class="nav__main-part__list-title">
+                                <div class="nav__main-part__list-title textcolor">
                                     utility pages
                                 </div>
-                                <div class="nav__main-part__list-content">
+                                <div class="nav__main-part__list-content textcolor">
                                     <ul>
                                         <li>Start Here</li>
                                         <li>Style guide</li>
@@ -490,7 +530,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -502,7 +541,7 @@
         <div class="container">
             <div class="footer__body">
                 <div class="footer__body__wrapper">
-                    <p>
+                    <p class="textcolor">
                         Copyright © Branding X | Designed by BRIX Templates - Powered by Webflow
                     </p>
                     <img src="images/desktop/footer/socm.png">
@@ -511,5 +550,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/changeLang.js"></script>
+    <script src="js/changeTheme.js"></script>
   </body>
 </html>
