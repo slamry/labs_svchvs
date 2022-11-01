@@ -2201,8 +2201,8 @@ body.noscroll {
 }
 
 .articles__subtitle{
-    margin-top: -7%;
-    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-bottom: 10%;
     font-weight: 400;
     font-size: 28px;
     letter-spacing: 0.2px;
@@ -2231,7 +2231,7 @@ body.noscroll {
 }
 
 #item2__subtitle{
-    margin-top: 0%;
+    margin-top: 8%;
 }
 @media (max-width:768px){
     #item2__subtitle{

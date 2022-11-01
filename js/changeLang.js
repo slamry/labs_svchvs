@@ -99,7 +99,44 @@ function setLangRus(lang){
     document.getElementById('step_subt-3').textContent = '/Запуск';  
     document.getElementById('contact-us__content__button1').textContent = 'Подробнее';
     document.getElementById('contact-us__content__button2').textContent = 'О нас';
+    ///
+    document.getElementById('articles_head_text').textContent = "Статьи и ресурсы";
+    for (var i = 0; i < document.getElementsByClassName('art_button_text').length; i++) {
+      document.getElementsByClassName('art_button_text')[i].textContent = "Больше материалов";
+    }
+    document.getElementById('art_category1').textContent = 'Маркетинг/ ноя 22, 2021';
+    document.getElementById('art_category2').textContent = 'Разработка/ ноя 22, 2021';
+    document.getElementById('art_category3').textContent = 'Разработка/ ноя 22, 2021';
+    document.getElementById('item1__subtitle').textContent = 'Разница между UX и дизайном пользовательского интерфейса: простое руководство для начинающих';
+    document.getElementById('item2__subtitle').textContent = 'Размеры шрифтов в графическом дизайне: полное руководство для подражания';
+    document.getElementById('item3__subtitle').textContent = '8 систем проектирования, которые вы можете проверить и скачать бесплатно';
+    for (var i = 0; i < document.getElementsByClassName('articles__description').length; i++) {
+      document.getElementsByClassName('articles__description')[i].textContent = "Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он";
+    } 
+    ///
+    for (var i = 0; i < document.getElementsByClassName('nav__item__title').length; i++) {
+      document.getElementsByClassName('nav__item__title')[i].textContent = "Давайте работать вместе";
+    } 
+    document.getElementById('pages_title').textContent = "Страницы";
+    document.getElementById('navlist1__li1').textContent = "Главная";
+    document.getElementById('navlist1__li2').textContent = "о нас";
+    document.getElementById('navlist1__li3').textContent = "блог";
+    document.getElementById('navlist1__li4').textContent = "посты";
+    document.getElementById('navlist1__li5').textContent = "портфолио";
+    document.getElementById('navlist1__li6').textContent = "ресурсы";
 
+    document.getElementById('navlist2__li1').textContent = "пакеты";
+    document.getElementById('navlist2__li2').textContent = "пакеты v2";
+    document.getElementById('navlist2__li3').textContent = "контакты";
+    document.getElementById('navlist2__li4').textContent = "сотрудники";
+
+    document.getElementById('util_pages').textContent = "утилиты";
+    document.getElementById('navlist3__li1').textContent = "Начало";
+    document.getElementById('navlist3__li2').textContent = "Style guide";
+    document.getElementById('navlist3__li3').textContent = "404 Not Found";
+    document.getElementById('navlist3__li4').textContent = "Защищен паролем";
+    document.getElementById('navlist3__li5').textContent = "Лицензия";
+    document.getElementById('navlist3__li6').textContent = "Журнал изменений";
   }
 }
 
@@ -188,6 +225,45 @@ function setLangEng(lang){
     document.getElementById('step_subt-3').textContent = '/Launch';
     document.getElementById('contact-us__content__button1').textContent = 'Contact us';
     document.getElementById('contact-us__content__button2').textContent = 'About our agency';
-              
+    ///
+    document.getElementById('articles_head_text').textContent = "Articles & Resources";
+    for (var i = 0; i < document.getElementsByClassName('art_button_text').length; i++) {
+      document.getElementsByClassName('art_button_text')[i].textContent = "browse more posts";
+    }
+    
+    document.getElementById('art_category1').textContent = 'Marketing/ nov 22, 2021';
+    document.getElementById('art_category2').textContent = 'development/ nov 22, 2021';
+    document.getElementById('art_category3').textContent = 'development/ nov 22, 2021';
+    document.getElementById('item1__subtitle').textContent = 'The difference between UX &amp; UI Design: A simple guide for beginner\'s';
+    document.getElementById('item2__subtitle').textContent = 'Font sizes in graphic design: The complete guide to follow';
+    document.getElementById('item3__subtitle').textContent = '8 design systems you can check out and download for free';
+    for (var i = 0; i < document.getElementsByClassName('articles__description').length; i++) {
+      document.getElementsByClassName('articles__description')[i].textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna";
+    }    
+    ///
+    for (var i = 0; i < document.getElementsByClassName('nav__item__title').length; i++) {
+      document.getElementsByClassName('nav__item__title')[i].textContent = "Let's work together";
+    }   
+    document.getElementById('pages_title').textContent = "Pages";
+    document.getElementById('navlist1__li1').textContent = "home";
+    document.getElementById('navlist1__li2').textContent = "about";
+    document.getElementById('navlist1__li3').textContent = "blog";
+    document.getElementById('navlist1__li4').textContent = "blog post";
+    document.getElementById('navlist1__li5').textContent = "portfolio";
+    document.getElementById('navlist1__li6').textContent = "portfolio single";
+
+    document.getElementById('navlist2__li1').textContent = "packages";
+    document.getElementById('navlist2__li2').textContent = "packages single";
+    document.getElementById('navlist2__li3').textContent = "contact";
+    document.getElementById('navlist2__li4').textContent = "team member";
+
+    document.getElementById('util_pages').textContent = "utility pages";
+    document.getElementById('navlist3_li1').textContent = "Start Here";
+    document.getElementById('navlist3__li2').textContent = "Style guide";
+    document.getElementById('navlist3__li3').textContent = "404 Not Found";
+    document.getElementById('navlist3__li4').textContent = "Password Protected";
+    document.getElementById('navlist3__li5').textContent = "Licenses";
+    document.getElementById('navlist3__li6').textContent = "Changelog";
+
   }
 }
