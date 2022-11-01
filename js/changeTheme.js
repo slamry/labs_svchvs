@@ -66,6 +66,8 @@ function setThemeLight(theme){
     for (var i = 0; i < document.getElementsByClassName('popup').length; i++) {
         document.getElementsByClassName('popup')[i].style.background = '#FFFFFF';
     }
+    document.getElementById("main-img-des").src = "images/desktop/main-page/img.png";
+    document.getElementById("main-img-tab").src = "images/tablet/main-page/img.png";
 
   //document.getElementById("photo").src = "img/1.jpg";  
 }
@@ -93,6 +95,8 @@ function setThemeDark(theme){
     for (var i = 0; i < document.getElementsByClassName('popup').length; i++) {
         document.getElementsByClassName('popup')[i].style.background = '#bcb2b8';
     }
-    
+    document.getElementById("main-img-des").src = "images/desktop/main-page/darkmode/img.png";
+    document.getElementById("main-img-tab").src = "images/tablet/main-page/darkmode/img.png";
+
     //document.getElementById("photo").src = "img/2.jpg";   
 }
