@@ -1344,6 +1344,7 @@ body.noscroll {
 }
 
 .projects__item__subtitle{
+    margin-bottom: 5%;
     letter-spacing: 0.2px;
     font-weight: 400;
     font-size: 38px;
