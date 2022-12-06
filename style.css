@@ -1,0 +1,27 @@
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 300px;
+}
+
+.key {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 14px;
+    background: #333333;
+    border: 1px solid #333333;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    margin: 0.1%;
+    transition: all 0.1s ease;
+}
+.keyboard{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(13, minmax(0, 0.8fr)) 2fr;
+    grid-column-gap: 0.1%;
+    grid-row-gap: 0.1%;
+}
