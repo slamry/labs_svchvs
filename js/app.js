@@ -41,11 +41,11 @@
                         <div class="card-image__body">
                             <div class="card-image__title">${volumeInfo.title ?? ""}</div>
                             <div class="card-image__category">${volumeInfo.categories && volumeInfo.categories.length > 0 
-                                                                ? `Категория: ${volumeInfo.categories[0]}` 
+                                                                ? `Category: ${volumeInfo.categories[0]}` 
                                                                 : ""}
                             </div>
                             <div class="card-image__author">${volumeInfo.authors && volumeInfo.authors.length > 0 
-                                                                ? `Авторы: ${volumeInfo.authors.join(", ")}` 
+                                                                ? `Authors: ${volumeInfo.authors.join(", ")}` 
                                                                 : ""}
                             </div>
                         </div>
