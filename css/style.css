@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 @charset "UTF-8";
 
@@ -34,7 +34,7 @@ body {
 body {
   color: #1d1f2e;
   line-height: 1;
-  font-family: "Roboto";
+  font-family: 'Montserrat';
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -46,7 +46,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Roboto";
+  font-family: 'Montserrat';
   font-size: inherit;
 }
 
@@ -118,6 +118,7 @@ body {
 
 .wrapper > * {
   min-width: 0;
+  background-color: #636363;
 }
 
 [class*="__container"] {
@@ -140,8 +141,9 @@ body {
 }
 
 .keyboard__info {
-  -ms-flex-item-align: start;
-  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  color: #fff;
   margin: 1.25rem 0;
 }
 
@@ -166,16 +168,17 @@ body {
 
 .keyboard__wrapper {
   width: 100%;
-  background-color: #e7e7e7;
+  background-color: #636363;
 }
 
 .keyboard__text {
   resize: none;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   border: none;
   outline: none;
-  background-color: #f7f7f7;
+  background-color: #aeaeae;
+  font-size: 0.5em;
   padding: 20px 30px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -200,7 +203,7 @@ body {
 
 .keyboard__key {
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgb(16, 16, 16);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,6 +218,7 @@ body {
   -o-transition: 0.2s;
   transition: 0.2s;
   z-index: 5;
+  color:#fff;
 }
 
 @supports (font-size: clamp(0.625rem, 0.375rem + 0.7272727273vw, 0.875rem)) {
@@ -246,7 +250,7 @@ body {
 }
 
 .keyboard__key.active {
-  background-color: #333;
+  background-color: rgb(226, 154, 53);
   color: #fff;
 }
 
@@ -299,30 +303,6 @@ body {
   position: absolute;
   top: 10%;
   left: 10%;
-}
-
-@-webkit-keyframes keys_animation {
-  0% {
-    background-color: #333;
-    color: #fff;
-  }
-
-  100% {
-    background-color: #fff;
-    color: #000;
-  }
-}
-
-@keyframes keys_animation {
-  0% {
-    background-color: #333;
-    color: #fff;
-  }
-
-  100% {
-    background-color: #fff;
-    color: #000;
-  }
 }
 
 @media (max-width: 42.5em) {

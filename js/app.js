@@ -1,4 +1,5 @@
 (() => {
+  // строгий режим, не дает системе закрывать глаза на некоторые ошибки
   "use strict";
   const keyValues = [
     {
@@ -783,12 +784,14 @@
 
   const keyboardBlock = document.querySelector(".keyboard");
   const textareaInput = document.querySelector("#editing");
+  // клавиши с залипанием
   const stickyKeysWithoutShiftValue = ["Shift", "Alt", "Ctrl"];
   const capsLockValue = "Caps Lock";
 
   var currentLanguage = localStorage.getItem("lang");
   if (!currentLanguage) currentLanguage = "en";
-
+  // все атрибуты, начинающиеся с префикса «data-», зарезервированы
+  // для использования программистами. доступны в свойстве dataset.
   function setBigLetters() {
     var keys = keyboardBlock.querySelectorAll(`[data-is-letter="true"]`);
     keys.forEach((_) => {
@@ -797,8 +800,10 @@
   }
 
   function setSmallLetters() {
+    //добавляем пользовательское свойство (атрибут) data-is-letter
     var keys = keyboardBlock.querySelectorAll(`[data-is-letter="true"]`);
     keys.forEach((_) => {
+      //меняем содержимое клавиш на нижний регистр
       _.innerHTML = _.dataset.withoutShiftValue.toLowerCase();
     });
   }
@@ -882,6 +887,7 @@
 
   function isChangeLanguage() {
     return (
+      //returns the first Element
       keyboardBlock.querySelector(
         '[data-without-shift-value="Shift"].active'
       ) &&
@@ -925,6 +931,8 @@
     });
   }
 
+
+
   function check_tab(element, event) {
     element.value;
     if ("Tab" == event.key) {
@@ -934,8 +942,12 @@
   }
   function insertTab() {
     let code = textareaInput.value;
+    //selectionStart – позиция начала выделения
+    //копирует всё до таба
     let before_tab = code.slice(0, textareaInput.selectionStart);
+    //всё после
     let after_tab = code.slice(textareaInput.selectionEnd, code.length);
+    //вставляет в textareа, объединяя с табом
     let cursor_pos = textareaInput.selectionStart + 1;
     textareaInput.value = before_tab + "\t" + after_tab;
     textareaInput.selectionStart = cursor_pos;
@@ -962,6 +974,7 @@
   function deleteClick() {
     let code = textareaInput.value;
     let before_tab = code.slice(0, textareaInput.selectionStart);
+    //пропускает символ справа(тот, что дб удален)
     let after_tab = code.slice(textareaInput.selectionEnd + 1, code.length);
     let cursor_pos = textareaInput.selectionStart;
     textareaInput.value = before_tab + after_tab;
@@ -970,6 +983,7 @@
   }
   function backspaceClick() {
     let code = textareaInput.value;
+    //пропускает символ слева
     let before_tab = code.slice(0, textareaInput.selectionStart - 1);
     let after_tab = code.slice(textareaInput.selectionEnd, code.length);
     let cursor_pos = textareaInput.selectionStart - 1;
@@ -977,12 +991,18 @@
     textareaInput.selectionStart = cursor_pos;
     textareaInput.selectionEnd = cursor_pos;
   }
+
+  //стрелочки
   function cursorMoveUp() {
     let cursor_pos = textareaInput.selectionStart;
     let text = textareaInput.value;
+    //разбивает строку на массив по заданному разделителю enter
     const strings = text.split("\n");
+    //количество строк (length): длина массива
     const cursorRow = text.substr(0, cursor_pos).split("\n").length;
     const cursorCurrentTextStart =
+    //-1: сдвигаем на строку вверх
+    //join - создает строку из элементов массива, вставляя между ними ""
       strings.slice(0, cursorRow - 1).join("").length + cursorRow - 1;
     const rowStartToCursorPosition = cursor_pos - cursorCurrentTextStart;
     let newCursorPosition =
@@ -999,6 +1019,7 @@
     textareaInput.selectionStart = newCursorPosition;
     textareaInput.selectionEnd = newCursorPosition;
   }
+  
   function cursorMoveDown() {
     let cursor_pos = textareaInput.selectionStart;
     let text = textareaInput.value;
@@ -1029,6 +1050,8 @@
     textareaInput.selectionStart = textareaInput.selectionStart + 1;
     textareaInput.selectionEnd = textareaInput.selectionStart;
   }
+
+  //создание документа
 
   const fragment = document.createDocumentFragment();
   const keys = keyValues.find((_) => _.lang === currentLanguage).keys;
