@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Lab8</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__title">Google Books API</div>
+			</div>
+		</header>
+
+		<main class="page page_home">
+			<section id="images" class="page__images images">
+				<div class="images__container">
+					<div class="images-search">
+						<form class="images-search__form form-images-search">
+							<div class="form-images-search__input input">
+								<input placeholder="Enter book's name!" type="text" class="input__field" autocomplete="off" autofocus />
+								<button class="input__clear _icon-close"></button>
+							</div>
+
+							<button type="submit" class="form-images-search__button">
+								Get
+							</button>
+						</form>
+					</div>
+					<div id="imagesData" class="images-data">
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a href="https://github.com/slamry/labs_svchvs">We are on Github</a>, 2022
+		</footer>
+
+	</div>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>
