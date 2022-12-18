@@ -5,7 +5,6 @@
 .rect {
     margin: 1% 5%;
     padding: 2%;
-    /* background: #FFFFFF; */
     border: 1px solid #be7656;
     border-radius: 1em;
 }
@@ -26,13 +25,13 @@
     border-radius: 0.5em;
 }
 
-.item_buttons{
+.item_buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.item_butt{
+.item_butt {
     transition: all 0.3s;
     margin-bottom: 8%;
 
@@ -83,7 +82,75 @@
     color: #FFFFFF;
 }
 
-.button > button:hover {
+.button>button:hover {
     background: #be7656;
     transition: all 0.3s;
+}
+
+/* /////////////////// ITEM FORM //////////////////////// */
+
+.item_form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_wrapp {
+    padding: 5%;
+    background: #FFFFFF;
+    border: 1px solid #be7656;
+    border-radius: 1em;
+}
+
+.form_content{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_buttons {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 5%;
+}
+
+.form_buttons>button {
+    transition: all 0.3s;
+
+    background: #efc3a4;
+    border: 1px solid #be7656;
+    border-radius: 0.5em;
+    width: 10em;
+    height: 3em;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 138%;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}
+
+.form_buttons>button:hover {
+    background: #be7656;
+    transition: all 0.3s;
+}
+
+.form_buttons>button:disabled,
+.form_buttons>button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
