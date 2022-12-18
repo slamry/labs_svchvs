@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Американо",
+        "price": 0,
+        "img": "./images/1.jpg",
+        "count": 0
+    },
+    {
+        "id": 2,
+        "name": "Капучино",
+        "price": 0,
+        "img": "./images/2.jpg",
+        "count": 0
+    },
+    {
+        "id": 3,
+        "name": "Латте",
+        "price": 0,
+        "img": "./images/3.jpg",
+        "count": 0
+    }
+]
