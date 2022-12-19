@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.css'
 
 
@@ -6,7 +7,8 @@ const Footer = () => {
         <header>
             <div className="wrapper">
                 <div className={styles.content}>
-                    little footer!!!
+                    <NavLink to='/'>Home</NavLink>
+                    <NavLink to='/aboutus'>About us</NavLink>
                 </div>
             </div>
         </header>
