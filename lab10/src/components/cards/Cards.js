@@ -35,6 +35,8 @@ const ADD_ITEM = 'ADD-ITEM'
 const UPDATE_ITEM = 'UPDATE-ITEM'
 const DELETE_ITEM = 'DELETE-ITEM'
 
+
+
 const ItemForm = (props) => {
 
     // const Buttondiv = {
@@ -53,8 +55,7 @@ const ItemForm = (props) => {
         isCountValid: false,
         isButtonActive: false
     })
-    const [getId, setId] = useState(4)
-
+    const [getId, setId] = useState(items.length + 5) // шоб на всякий случай
 
     var addItemNameRef = React.createRef()
     var addItemPriceRef = React.createRef()
@@ -185,7 +186,6 @@ const ItemForm = (props) => {
                                         if (data.isNameValid && data.isPriceValid
                                             && data.isCountValid && data.isImgValid) {
                                             // data.isButtonActive = true
-                                            console.log('ну, я удивлена')
                                             addItem()
                                             props.onClose()
                                         }
@@ -211,9 +211,28 @@ const ItemForm = (props) => {
                 )
             }
             case DELETE_ITEM: {
+
+                let onClickFuncs = () => {
+                    props.deleteItem()
+                    props.onClose()
+                }
                 return (
-                    <div>
-                        {DELETE_ITEM}
+                    <div className={styles.item_form}>
+                        <div className={styles.form_wrapp}>
+                            <div className={styles.form_content}>
+                                Точно удалить?
+                            </div>
+                            <div className={styles.form_buttons}>
+                                <button
+                                    onClick={onClickFuncs}
+                                >
+                                    Удалить
+                                </button>
+                                <button onClick={props.onClose}>
+                                    Отмена
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 )
             }
@@ -231,6 +250,17 @@ const ItemForm = (props) => {
 const CardArea = (props) => {
     const [show, setShow] = useState(false)
     const [action, setAction] = useState()
+
+    let deleteItem = (id) => {
+        var state = JSON.parse(localStorage.getItem("items"))
+        for (var i = 0; i < state.length; i++) {
+            if (state[i].id === id) {
+                state.splice(i, 1)
+                break;
+            }
+        }
+        localStorage.setItem("items", JSON.stringify(state))
+    }
 
     return (
         <div className={styles.content}>
@@ -255,6 +285,7 @@ const CardArea = (props) => {
                             onClick={() => {
                                 setShow(true)
                                 setAction(UPDATE_ITEM)
+                                console.log(props.id)
                             }}
                         >
                             Обновить
@@ -263,6 +294,7 @@ const CardArea = (props) => {
                             onClick={() => {
                                 setShow(true)
                                 setAction(DELETE_ITEM)
+                                // deleteItem(props.id)
                             }}
                         >
                             Удалить
@@ -270,25 +302,15 @@ const CardArea = (props) => {
                     </div>
                 </div>
             </div>
-            <ItemForm action={action} show={show} />
+            <ItemForm
+                action={action}
+                show={show}
+                deleteItem={() => { deleteItem(props.id) }}
+                onClose={() => { setShow(false) }}
+            />
         </div>
     )
 }
-
-// let getData = () => {
-//     var data = JSON.parse(localStorage.getItem("items"))
-//     return data
-// }
-
-// let CardComponents = getData().map((item) =>
-//     <CardArea
-//         key={item.id}
-//         img={item.img}
-//         name={item.name}
-//         price={item.price}
-//         count={item.count}
-//     />
-// )
 
 const Cards = () => {
     var state = JSON.parse(localStorage.getItem("items"))
@@ -302,6 +324,7 @@ const Cards = () => {
             setItemsData(JSON.parse(localStorage.getItem("items")).map((item) =>
                 <CardArea
                     key={item.id}
+                    id={item.id}
                     img={item.img}
                     name={item.name}
                     price={item.price}
@@ -309,18 +332,6 @@ const Cards = () => {
                 />
             ))
         }, 1)
-
-        // var t = JSON.parse(localStorage.getItem("items"))
-        // itemsData = t.map((item) =>
-        //     <CardArea
-        //         key={item.id}
-        //         img={item.img}
-        //         name={item.name}
-        //         price={item.price}
-        //         count={item.count}
-        //     />
-        // )
-        // setItemsData(itemsData)
     }, [state])
 
     return (
@@ -329,7 +340,6 @@ const Cards = () => {
             <div className={styles.button}>
                 <button
                     onClick={() => {
-
                         setShow(true)
                         setAction(ADD_ITEM)
                     }}
@@ -337,7 +347,11 @@ const Cards = () => {
                     Добавить
                 </button>
             </div>
-            <ItemForm action={action} show={show} onClose={() => { setShow(false) }} />
+            <ItemForm
+                action={action}
+                show={show}
+                onClose={() => { setShow(false) }}
+            />
         </div>
     )
 }
