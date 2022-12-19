@@ -220,7 +220,7 @@ const ItemForm = (props) => {
                                     //     setDisabled(true)
                                     // }}
                                     onClick={() => {
-                                        addItem()                                        
+                                        addItem()
                                         setDisabled(true)
                                         props.onClose()
                                     }}
@@ -363,7 +363,35 @@ const ItemForm = (props) => {
 
 const CardArea = (props) => {
     const [show, setShow] = useState(false)
+
     const [action, setAction] = useState()
+
+    // const [lightningRect, setLightningRect] = useState(0)
+    const [highlight, setHighlight] = useState('none')
+    const rectStyle = { boxShadow: `${highlight}` }
+    const highlightOnClick = () => {
+        setHighlight('0px 0px 8px 8px rgba(255, 157, 0, 0.2)')
+    }
+    const changeHighlightOnClick = () => {
+        if (highlight !== 'none') {
+            setHighlight('none')
+            // setLightningRect(props.id) // запоминаем id того что светится
+        }
+        else {//элемент не светится
+            highlightOnClick()
+            // if (props.id !== lightningRect) {
+            //     setHighlight('none')
+            //     highlightOnClick()
+            //     setLightningRect(props.id)
+            // }
+        }
+    }
+    // const deleteHighlightTestF = () => {
+
+    // }
+    // // const deleteHighlightOnButtonClick=()=>{
+    // //     setHighlight('none')
+    // // }
 
     let deleteItem = (id) => {
         var state = JSON.parse(localStorage.getItem("items"))
@@ -379,7 +407,11 @@ const CardArea = (props) => {
 
     return (
         <div className={styles.content}>
-            <div className={styles.rect}>
+            <div
+                style={rectStyle}
+                className={styles.rect}
+                onClick={changeHighlightOnClick}
+            >
                 <div className={styles.grid_wrapp}>
                     <div className={styles.img}>
                         <img src={`${props.img}`} alt="" />
@@ -456,6 +488,7 @@ const Cards = () => {
                     onClick={() => {
                         setShow(true)
                         setAction(ADD_ITEM)
+
                     }}
                 >
                     Добавить

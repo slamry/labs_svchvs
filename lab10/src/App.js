@@ -1,12 +1,14 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Header from './components/header/Header'
 import Main from './components/main/Main'
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <Main></Main>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

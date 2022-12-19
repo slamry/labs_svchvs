@@ -114,6 +114,13 @@
     align-items: center;
 }
 
+.form_content > input{
+    width: 20em;
+    margin-bottom: 2%;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
 .form_buttons {
     margin-top: 5%;
     display: grid;
