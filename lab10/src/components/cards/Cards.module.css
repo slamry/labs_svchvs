@@ -7,6 +7,7 @@
     padding: 2%;
     border: 1px solid #be7656;
     border-radius: 1em;
+    box-shadow: none;
 }
 
 /* .rect:focus {
