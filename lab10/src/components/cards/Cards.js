@@ -1,26 +1,7 @@
 import styles from './Cards.module.css'
 import React, { useEffect, useState } from 'react'
 
-// let testfunc = () => {
-//     localStorage.removeItem("items")
-//     var data = require('./items.json')
-//     localStorage.setItem("items", JSON.stringify(data))
-//     data = JSON.parse(localStorage.getItem("items"))
-//     data.push({
-//         "id": 4,
-//         "name": "Раф",
-//         "price": 0,
-//         "img": "https://www.dolce-gusto.ru/m/media/wysiwyg/mygento/recipes/latte-macchiato-2-caramel-latte-macchiatto.jpg",
-//         "count": 0
-//     })
-//     console.log(data)
-
-//     localStorage.setItem("items", JSON.stringify(data))
-//     data = JSON.parse(localStorage.getItem("items"))
-//     console.log(data)
-// }
-
-///////////////////////////////////
+///////////////////// reboot //////////////////////
 
 // let testfunc = () => {
 //     localStorage.removeItem("items")
@@ -39,10 +20,13 @@ const DELETE_ITEM = 'DELETE-ITEM'
 
 const ItemForm = (props) => {
 
-    // const Buttondiv = {
-    //     disabled: false
-    // }
     var items = JSON.parse(localStorage.getItem("items"))
+    var addItemNameRef = React.createRef()
+    var addItemPriceRef = React.createRef()
+    var addItemImgRef = React.createRef()
+    var addItemCountRef = React.createRef()
+
+    const [disabled, setDisabled] = useState(true)
 
     const [data, setData] = useState({
         name: '',
@@ -52,19 +36,12 @@ const ItemForm = (props) => {
         img: '',
         isImgValid: false,
         count: '',
-        isCountValid: false,
-        isButtonActive: false
+        isCountValid: false
     })
     const [getId, setId] = useState(items.length + 5) // шоб на всякий случай
 
-    var addItemNameRef = React.createRef()
-    var addItemPriceRef = React.createRef()
-    var addItemImgRef = React.createRef()
-    var addItemCountRef = React.createRef()
-    var addButtonRef = React.createRef()
-
     let validateStringValue = (value) => {
-        if (typeof value === "string") {
+        if (typeof value === "string" && value !== "") {
             return true
         }
         else {
@@ -99,6 +76,15 @@ const ItemForm = (props) => {
         // if (value.search('https://') >= 0) { return true }
         // else { return false }
     }
+    let checkButtonForValidate = () => {
+        if (data.isNameValid && data.isPriceValid
+            && data.isCountValid && data.isImgValid) {
+            setDisabled(false)
+        }
+        else {
+            setDisabled(true)
+        }
+    }
 
     let addItem = () => {
         setId(getId => getId + 1)
@@ -106,14 +92,52 @@ const ItemForm = (props) => {
         items.push({
             "id": getId,
             "name": `${data.name}`,
-            "price": `${data.price}`,
+            "price": data.price,
             "img": `${data.img}`,
-            "count": `${data.count}`
+            "count": data.count
         })
         console.log(items)
-        data.id++
         localStorage.setItem("items", JSON.stringify(items))
+        setData({
+            name: '',
+            isNameValid: false,
+            price: '',
+            isPriceValid: false,
+            img: '',
+            isImgValid: false,
+            count: '',
+            isCountValid: false
+        })
     }
+
+    let updateItem = (id) => {
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].id === id) {
+                items[i] = {
+                    "id": id,
+                    "name": `${data.name}`,
+                    "price": data.price,
+                    "img": `${data.img}`,
+                    "count": data.count
+                }
+                console.log(items)
+                localStorage.setItem("items", JSON.stringify(items))
+                break;
+            }
+        }
+        setData({
+            name: '',
+            isNameValid: false,
+            price: '',
+            isPriceValid: false,
+            img: '',
+            isImgValid: false,
+            count: '',
+            isCountValid: false
+        })
+    }
+
+
 
     if (!props.show) {
         return null;
@@ -134,7 +158,10 @@ const ItemForm = (props) => {
                                             data.name = value
                                             data.isNameValid = true
                                         }
-                                        else { data.isNameValid = false }
+                                        else {
+                                            data.isNameValid = false
+                                        }
+                                        checkButtonForValidate()
                                     }}
                                 />
 
@@ -147,7 +174,10 @@ const ItemForm = (props) => {
                                             data.price = value
                                             data.isPriceValid = true
                                         }
-                                        else { data.isPriceValid = false }
+                                        else {
+                                            data.isPriceValid = false
+                                        }
+                                        checkButtonForValidate()
                                     }}
                                 />
 
@@ -160,7 +190,10 @@ const ItemForm = (props) => {
                                             data.img = value
                                             data.isImgValid = true
                                         }
-                                        else { data.isImgValid = false }
+                                        else {
+                                            data.isImgValid = false
+                                        }
+                                        checkButtonForValidate()
                                     }}
                                 />
 
@@ -173,26 +206,23 @@ const ItemForm = (props) => {
                                             data.count = value
                                             data.isCountValid = true
                                         }
-                                        else { data.isCountValid = false }
+                                        else {
+                                            data.isCountValid = false
+                                        }
+                                        checkButtonForValidate()
                                     }}
                                 />
                             </div>
                             <div className={styles.form_buttons}>
                                 <button
-                                    ref={addButtonRef}
-                                    // style={Buttondiv}
-                                    // disabled={data.isButtonActive}
+                                    disabled={disabled}
+                                    // onFocus={() => {
+                                    //     setDisabled(true)
+                                    // }}
                                     onClick={() => {
-                                        if (data.isNameValid && data.isPriceValid
-                                            && data.isCountValid && data.isImgValid) {
-                                            // data.isButtonActive = true
-                                            addItem()
-                                            props.onClose()
-                                        }
-                                        else {
-                                            // data.isButtonActive = false
-                                            console.log('что-то не так')
-                                        }
+                                        addItem()                                        
+                                        setDisabled(true)
+                                        props.onClose()
                                     }}
                                 >
                                     Добавить
@@ -203,13 +233,96 @@ const ItemForm = (props) => {
                     </div>
                 )
             }
+
             case UPDATE_ITEM: {
                 return (
-                    <div>
-                        {UPDATE_ITEM}
+                    <div className={styles.item_form}>
+                        <div className={styles.form_wrapp}>
+                            <div className={styles.form_content}>
+                                <input type="text"
+                                    placeholder='Название'
+                                    ref={addItemNameRef}
+                                    onChange={() => {
+                                        var value = addItemNameRef.current.value
+                                        if (validateStringValue(value)) {
+                                            data.name = value
+                                            data.isNameValid = true
+                                        }
+                                        else {
+                                            data.isNameValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                />
+
+                                <input type="text"
+                                    placeholder='Цена'
+                                    ref={addItemPriceRef}
+                                    onChange={() => {
+                                        var value = addItemPriceRef.current.value
+                                        if (validateIntValue(value)) {
+                                            data.price = value
+                                            data.isPriceValid = true
+                                        }
+                                        else {
+                                            data.isPriceValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                />
+
+                                <input type="text"
+                                    placeholder='Ссылка на фото'
+                                    ref={addItemImgRef}
+                                    onChange={() => {
+                                        var value = addItemImgRef.current.value
+                                        if (validateUrl(value)) {
+                                            data.img = value
+                                            data.isImgValid = true
+                                        }
+                                        else {
+                                            data.isImgValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                />
+
+                                <input type="text"
+                                    placeholder='Количество'
+                                    ref={addItemCountRef}
+                                    onChange={() => {
+                                        var value = addItemCountRef.current.value
+                                        if (validateIntValue(value)) {
+                                            data.count = value
+                                            data.isCountValid = true
+                                        }
+                                        else {
+                                            data.isCountValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                />
+                            </div>
+                            <div className={styles.form_buttons}>
+                                <button
+                                    disabled={disabled}
+                                    onClick={() => {
+                                        updateItem(props.id)
+                                        setDisabled(true)
+                                        props.onClose()
+                                    }}
+                                >
+                                    Подтвердить
+                                </button>
+                                <button onClick={props.onClose}>
+                                    Отмена
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 )
             }
+
             case DELETE_ITEM: {
 
                 let onClickFuncs = () => {
@@ -236,6 +349,7 @@ const ItemForm = (props) => {
                     </div>
                 )
             }
+
             default: {
                 return (
                     <div>
@@ -259,6 +373,7 @@ const CardArea = (props) => {
                 break;
             }
         }
+        console.log(state)
         localStorage.setItem("items", JSON.stringify(state))
     }
 
@@ -285,7 +400,6 @@ const CardArea = (props) => {
                             onClick={() => {
                                 setShow(true)
                                 setAction(UPDATE_ITEM)
-                                console.log(props.id)
                             }}
                         >
                             Обновить
@@ -294,7 +408,6 @@ const CardArea = (props) => {
                             onClick={() => {
                                 setShow(true)
                                 setAction(DELETE_ITEM)
-                                // deleteItem(props.id)
                             }}
                         >
                             Удалить
@@ -305,6 +418,7 @@ const CardArea = (props) => {
             <ItemForm
                 action={action}
                 show={show}
+                id={props.id}
                 deleteItem={() => { deleteItem(props.id) }}
                 onClose={() => { setShow(false) }}
             />
