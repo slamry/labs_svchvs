@@ -70,12 +70,6 @@ const ItemForm = (props) => {
         else {
             return false
         }
-
-        // console.log(typeof value)
-        // console.log(value)
-        // console.log(value.search('https://'))
-        // if (value.search('https://') >= 0) { return true }
-        // else { return false }
     }
     let checkButtonForValidate = () => {
         if (data.isNameValid && data.isPriceValid
@@ -217,9 +211,6 @@ const ItemForm = (props) => {
                             <div className={styles.form_buttons}>
                                 <button
                                     disabled={disabled}
-                                    // onFocus={() => {
-                                    //     setDisabled(true)
-                                    // }}
                                     onClick={() => {
                                         addItem()
                                         setDisabled(true)

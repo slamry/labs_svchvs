@@ -10,10 +10,6 @@
     box-shadow: none;
 }
 
-/* .rect:focus {
-    background-color: bisque;
-} */
-
 .grid_wrapp {
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
@@ -24,6 +20,17 @@
 .img>img {
     height: 200px;
     border-radius: 0.5em;
+}
+
+@media (max-width:630px) {
+    .img>img {
+        height: 75px;
+        border-radius: 0.5em;
+    }
+
+    .text_content {
+        font-size: 0.5em;
+    }
 }
 
 .item_buttons {
@@ -51,6 +58,16 @@
     letter-spacing: 0.04em;
 
     color: #FFFFFF;
+}
+
+@media (max-width:630px) {
+    .item_butt {
+        margin-bottom: 10%;
+        width: 7em;
+        height: 2.5em;
+        font-size: 0.5em;
+        text-align: center;
+    }
 }
 
 .item_butt:hover {
@@ -83,6 +100,16 @@
     color: #FFFFFF;
 }
 
+@media (max-width:630px) {
+    .button>button {
+        margin-top: 3%;
+        border-radius: 0.4em;
+        width: 12em;
+        height: 2.5em;
+        font-size: 0.6em;
+    }
+}
+
 .button>button:hover {
     background: #be7656;
     transition: all 0.3s;
@@ -109,17 +136,28 @@
     border-radius: 1em;
 }
 
-.form_content{
+.form_content {
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.form_content > input{
+.form_content>input {
     width: 20em;
     margin-bottom: 2%;
     font-family: 'Montserrat';
     font-style: normal;
+}
+
+@media (max-width:630px) {
+    .form_content {
+        font-size: 0.7em;
+    }
+    .form_content>input {
+        width: 15em;
+        font-size: 0.7em;
+        margin-bottom: 2%;
+    }
 }
 
 .form_buttons {
@@ -150,6 +188,14 @@
 
     color: #FFFFFF;
 }
+@media (max-width:630px) {
+    .form_buttons>button {
+        border-radius: 0.5em;
+        width: 10em;
+        height: 3em;
+        font-size: 0.7em;
+    }
+}
 
 .form_buttons>button:hover {
     background: #be7656;
@@ -157,8 +203,8 @@
 }
 
 .form_buttons>button:disabled,
-.form_buttons>button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+.form_buttons>button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
 }
