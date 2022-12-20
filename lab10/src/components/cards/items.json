@@ -1,23 +1,23 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "name": "Американо",
-        "price": 0,
+        "price": 10,
         "img": "https://img5.goodfon.ru/original/2048x2048/c/94/kofe-napitok-kruzhka-kniga-nastroenie.jpg",
-        "count": 0
+        "count": 2
+    },
+    {
+        "id": 1,
+        "name": "Капучино",
+        "price": 11,
+        "img": "https://pm1.narvii.com/7623/f00e7c2f170552d69864f0a031aaa0b7c7ad1c7ar1-736-731v2_hq.jpg",
+        "count": 3
     },
     {
         "id": 2,
-        "name": "Капучино",
-        "price": 0,
-        "img": "https://pm1.narvii.com/7623/f00e7c2f170552d69864f0a031aaa0b7c7ad1c7ar1-736-731v2_hq.jpg",
-        "count": 0
-    },
-    {
-        "id": 3,
         "name": "Латте",
-        "price": 0,
+        "price": 13,
         "img": "https://i.pinimg.com/originals/0e/b0/61/0eb0616936c803f3a84b06c624631b6b.jpg",
-        "count": 0
+        "count": 4
     }
 ]

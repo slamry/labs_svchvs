@@ -39,7 +39,7 @@ const ItemForm = (props) => {
         count: '',
         isCountValid: false
     })
-    const [getId, setId] = useState(items.length + 5) // шоб на всякий случай
+    const [getId, setId] = useState(items.length)
 
     let validateStringValue = (value) => {
         if (typeof value === "string" && value !== "") {
@@ -131,7 +131,6 @@ const ItemForm = (props) => {
             isCountValid: false
         })
     }
-
 
 
     if (!props.show) {
@@ -245,6 +244,16 @@ const ItemForm = (props) => {
                                         }
                                         checkButtonForValidate()
                                     }}
+                                    onClick={() => {
+                                        if (addItemNameRef.current.value === '') {
+                                            addItemNameRef.current.value = items[props.id].name
+                                            if (validateStringValue(addItemNameRef.current.value)) {
+                                                data.name = addItemNameRef.current.value
+                                                data.isNameValid = true
+                                            }
+                                        }
+                                        checkButtonForValidate()
+                                    }}
                                 />
 
                                 <input type="text"
@@ -258,6 +267,16 @@ const ItemForm = (props) => {
                                         }
                                         else {
                                             data.isPriceValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                    onClick={() => {
+                                        if (addItemPriceRef.current.value === '') {
+                                            addItemPriceRef.current.value = items[props.id].price
+                                            if (validateIntValue(addItemPriceRef.current.value)) {
+                                                data.price = addItemPriceRef.current.value
+                                                data.isPriceValid = true
+                                            }
                                         }
                                         checkButtonForValidate()
                                     }}
@@ -277,6 +296,16 @@ const ItemForm = (props) => {
                                         }
                                         checkButtonForValidate()
                                     }}
+                                    onClick={() => {
+                                        if (addItemImgRef.current.value === '') {
+                                            addItemImgRef.current.value = items[props.id].img
+                                            if (validateUrl(addItemImgRef.current.value)) {
+                                                data.img = addItemImgRef.current.value
+                                                data.isImgValid = true
+                                            }
+                                        }
+                                        checkButtonForValidate()
+                                    }}
                                 />
 
                                 <input type="text"
@@ -290,6 +319,16 @@ const ItemForm = (props) => {
                                         }
                                         else {
                                             data.isCountValid = false
+                                        }
+                                        checkButtonForValidate()
+                                    }}
+                                    onClick={() => {
+                                        if (addItemCountRef.current.value === '') {
+                                            addItemCountRef.current.value = items[props.id].count
+                                            if (validateIntValue(addItemCountRef.current.value)) {
+                                                data.count = addItemCountRef.current.value
+                                                data.isCountValid = true
+                                            }
                                         }
                                         checkButtonForValidate()
                                     }}
