@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 2%;
     background-color: #a86f5d;
     color: #fff;
@@ -9,6 +9,13 @@
     font-weight: 600;
     font-size: 1em;
     padding: 2% 10%;
+}
+
+@media (max-width:320px) {
+    .content {
+        font-size: 0.55em;
+        padding: 5% 10%;
+    }
 }
 
 .content>a {

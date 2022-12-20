@@ -2,7 +2,6 @@
     margin: 6.2% 0%;
 }
 
-
 @media (max-width:768px) {
     .content{
         margin: 21.5% 0%;
@@ -21,4 +20,13 @@
     text-align: justify;
     line-height: 150%;
     font-size: 1em;
+}
+
+@media (max-width:320px) {
+    .title{
+        font-size: 1em;
+    }
+    .text{
+        font-size: 0.8em;
+    }
 }
