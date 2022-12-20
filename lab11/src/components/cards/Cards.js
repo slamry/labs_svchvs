@@ -17,8 +17,6 @@ const ADD_ITEM = 'ADD-ITEM'
 const UPDATE_ITEM = 'UPDATE-ITEM'
 const DELETE_ITEM = 'DELETE-ITEM'
 
-
-
 const ItemForm = (props) => {
 
     var items = JSON.parse(localStorage.getItem("items"))
