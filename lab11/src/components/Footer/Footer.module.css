@@ -1,0 +1,31 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2%;
+    background-color: #a86f5d;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 2% 10%;
+}
+
+@media (max-width:320px) {
+    .content {
+        font-size: 0.55em;
+        padding: 5% 10%;
+    }
+}
+
+.content>a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff
+}
+
+.content>a:hover {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: bisque;
+}

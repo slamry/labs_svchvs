@@ -1,0 +1,42 @@
+.content {
+    height: 45vh;
+    margin: 5% 0%;
+    padding: 0% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width:768px) {
+    .content {
+        height: 60vh;
+    }
+}
+
+.img>img {
+    height: 200px;
+    border-radius: 5%;
+}
+
+.name {
+    margin-top: 3%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width:320px) {
+    .img>img {
+        height: 80px;
+    }
+    .name{
+        font-size: 0.8em;
+    }
+    .content {
+        height: 75vh;
+    }
+}
