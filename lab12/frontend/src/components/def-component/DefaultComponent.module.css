@@ -1,0 +1,33 @@
+.content {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.button{
+    transition: all 0.3s;
+    margin-top: 8%;
+    background: #efc3a4;
+    border: 1px solid #be7656;
+    border-radius: 0.3em;
+    width: 20em;
+    height: 2em;
+    padding-top: 0.8%;
+    font-size: 0.9em;
+    line-height: 138%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.button>a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    transition: all 0.3s ease;
+    background-color: #be7656;
+}
